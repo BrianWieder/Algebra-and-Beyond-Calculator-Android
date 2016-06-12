@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.a4wieders.algebraandbeyond.MainActivity">
+    tools:context="com.a4wieders.algebraandbeyond.MainActivity"
+    android:padding="0dp">
 
     <LinearLayout
         android:orientation="vertical"
@@ -16,14 +17,17 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:padding="0dp"
+        android:layout_margin="0dp">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:weightSum="2"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:padding="0dp">
 
             <Button
                 android:layout_width="fill_parent"
@@ -31,14 +35,18 @@
                 android:text="Polynomial Factoring"
                 android:id="@+id/PolyBtn"
                 android:layout_weight="1"
-                android:backgroundTint="#ff0000" />
+                android:backgroundTint="#ff0000"
+                android:padding="0dp"
+                android:layout_margin="0dp" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Bionomial Factoring"
                 android:id="@+id/BioBtn"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:padding="0dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -46,21 +54,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="2"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:layout_margin="0dp">
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Quadratic Formula"
                 android:id="@+id/QuadBtn"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:padding="0dp" />
 
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:text="Trinomial Factoring"
                 android:id="@+id/TriBtn"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:padding="0dp" />
         </LinearLayout>
 
     </LinearLayout>
