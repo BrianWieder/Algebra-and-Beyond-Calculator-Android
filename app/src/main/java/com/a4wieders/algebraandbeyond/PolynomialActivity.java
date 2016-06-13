@@ -2,10 +2,12 @@ package com.a4wieders.algebraandbeyond;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.opengl.EGLDisplay;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -58,18 +60,20 @@ public class PolynomialActivity extends AppCompatActivity {
                         result.setText(Functions.GCF(x2Double, xDouble, x3Double, constantDouble));
 
                     } catch (NumberFormatException e) {
-                        Context context = getApplicationContext();
-                        new AlertDialog.Builder(context)
-                                .setTitle("incompatible numbers")
-                                .setMessage("Please enter compatible numbers")
-                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
+                        AlertDialog.Builder errorDialog = new AlertDialog.Builder(PolynomialActivity.this);
+                        errorDialog.setTitle("Incompatible numbers");
+                        errorDialog.setMessage("Please enter compatible numbers");
+                        errorDialog.setCancelable(false);
+                        errorDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Intent main = new Intent(PolynomialActivity.this, MainActivity.class);
+                                startActivity(main);
+                            }
+                        });
 
-                                    }
-                                })
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
+                        AlertDialog error = errorDialog.create();
+                        error.show();
                     }
                 }
 

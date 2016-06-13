@@ -25,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(polyIntent);
             }
         });
+        BioBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent binoIntent = new Intent(MainActivity.this, BinomialActivity.class);
+                startActivity(binoIntent);
+            }
+        });
     }
 }
