@@ -32,5 +32,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(binoIntent);
             }
         });
+        QuadBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quadIntent = new Intent(MainActivity.this, QuadraticActivity.class);
+                startActivity(quadIntent);
+            }
+        });
+        TriBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent triIntent = new Intent(MainActivity.this, TrinomialActivity.class);
+                startActivity(triIntent);
+            }
+        });
     }
 }

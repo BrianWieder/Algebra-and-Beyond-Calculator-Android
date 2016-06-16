@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".PolynomialActivity" />
-        <activity android:name=".BinomialActivity"></activity>
+        <activity android:name=".BinomialActivity" />
+        <activity android:name=".QuadraticActivity" />
+        <activity android:name=".TrinomialActivity"></activity>
     </application>
 
 </manifest>

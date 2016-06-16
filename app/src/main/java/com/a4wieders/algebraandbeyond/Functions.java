@@ -84,4 +84,42 @@ public class Functions {
     public static String BinomialFactoring(double x, double constant){
         return"("+sqrt(x)+"x + "+sqrt(constant) +")("+sqrt(x)+"x - "+sqrt(constant)+")\nAlways check to make sure that the outputing factors are in simplest form";
     }
+
+    public static String QuadraticFormula(double a, double b, double c){
+        Double determinant = b*b-4*a*c;
+
+        if(determinant > 0){
+            double root2 = (-b-sqrt(determinant))/(2*a);
+            double root1 = (-b+sqrt(determinant))/(2*a);
+            return "The roots of this is are "+root1 +" and "+root2;
+        }else if(determinant == 0) {
+            double root1 = -b / (2 * a);
+            double root2 = root1;
+            return "The roots of this is are " + root1 + " and " + root2;
+        }
+        Log.e("Debug", "The determinate is "+ determinant);
+        return "Error, roots could not be found";
+    }
+
+    public static String findStuff(double firstCoeffient, double secondCoeffient, double thirdCoeffient){
+        boolean found = false;
+        double x = -200;
+        int y1 = -200;
+        while(!found){
+            double firstThird = firstCoeffient * thirdCoeffient;
+            double xDivThird = firstThird / x;
+            double xPxDthird = x + xDivThird;
+            if(xPxDthird == secondCoeffient){
+                return GCF(x, xDivThird, firstCoeffient, thirdCoeffient);
+            }else{
+                x += 1;
+                y1 += 1;
+            }
+            if(y1 >= 2000){
+                return cant();
+            }
+        }
+        return cant();
+    }
+
 }

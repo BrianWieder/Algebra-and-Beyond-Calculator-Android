@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Algebra-and-Beyond-Calculator-Android.iml" filepath="$PROJECT_DIR$/Algebra-and-Beyond-Calculator-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/AlgebraandBeyond.iml" filepath="$PROJECT_DIR$/AlgebraandBeyond.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
